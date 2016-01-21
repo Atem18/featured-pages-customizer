@@ -166,6 +166,14 @@ class TC_controls_fpc extends WP_Customize_Control	{
 	                'post_status'     =>  'publish' )
 	            );
 
+              $tc_all_posts['post'] = get_posts(  array(
+	                'numberposts'     =>  1000,
+	                'orderby'         =>  'date' ,
+	                'order'           =>  'DESC' ,
+	                'post_type'       =>  'post',
+	                'post_status'     =>  'publish' )
+	            );
+
 		          ?>
 			         <label>
 						<span class="customize-control-title"><?php echo esc_html( $this->label );?></span>
